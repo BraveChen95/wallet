@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../static/css/reset_password.css">
+	<script>
+		function checkUser(){
+				var newPaw=$('#newPaw').val(),
+		   			newPaw1=$('#newPaw1').val(),
+		   			oldPaw=$('#oldPaw').val();
+				if(newPaw!=newPaw1){
+						$('#tsPsw').show();
+						setTimeout(function(){
+							$('#tsPsw').hide();
+						},1000)
+						return false;
+				}else{
+					var hash=hex_md5(newPaw),
+					    oldHash=hex_md5(oldPaw);
+					$('#newPaw').val(hash);
+					$('#oldPaw').val(oldHash);
+				}
+			}
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="all">
+			<p><a href="/">个人中心</a></p>
+            <p><a href="/}">退出</a></p>
+
+		 </div>
+		<nav class="navbar head" role="navigation">
+   			<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            		<span class="sr-only">切换导航</span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+        		</button>
+       			<a class="navbar-brand" href="#"><img src="../static/images/logo.png"></a>
+    		</div>
+
+    	</nav>
+		<div class="row content">
+			<div id="dialog">
+				<h3>重置密码</h3>
+                <form method="post" id="forms" onsubmit="return checkUser()">
+					<input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
+                    <p><input type="password" placeholder="原密码" id="oldPaw" name="old_password"></p>
+					<p><input type="password" placeholder="新密码" id="newPaw" name="new_password"></p>
+					<p><input type="password" placeholder="确认新密码" id="newPaw1"></p>
+					<p id="tsPsw">两次输入密码不一致</p>
+					<p><button type="submit" class="btn btn-info" id="qrBtn">确认</button></p>
+				</form>
+
+			</div>
+		</div>
+		<div class="row footer">
+			<div class="col-md-12">
+				京审备案
+			</div>
+		</div>
+	</div>
+	<script src="../../static/js/jquery-1.11.1.min.js"></script>
+	<script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../static/js/md5.js"></script>
+	<script src="../../static/js/structure.js"></script>
+	<script src="../../static/js/resetPsw.js"></script>
+	<script src="../../static/js/mark.js"></script>
+</body>
+</html>

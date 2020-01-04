@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../static/css/loge.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="login_body l_clear" >
+                <div class="login_form l_float">
+                    <div class="login_top">
+                        <img src="../../static/images/logo_z.svg" alt="" class="">
+
+                        <div class="login_tags b_clear">
+                            <span class="top_tag l_float active" id="PwdLogin">密码登录</span>
+                            <span class="top_tag r_float" id="QrcodeLogin">账号注册</span>
+                        </div>
+                    </div>
+                    <div class="login_con">
+                        <form action="" method="POST">
+                            <div>
+                                <label for="user_name">用户名</label>
+                                <input type="text" name="" id="user_name" placeholder="账号/手机号/邮箱">
+                                <img src="../../static/images/user.svg">
+                                <p class="tips hidden">请检查您的账号</p>
+                            </div>
+                            <div>
+                                <label for="user_pwd">密码</label>
+                                <input type="password" name="" id="user_pwd" placeholder="请输入账户密码">
+                                <img src="../../static/images/lock.svg">
+                                <p class="tips hidden">请检查您的密码</p>
+                            </div>
+                            <div class="b_clear">
+                                <label for="auth_code" class="b_clear">验证码</label>
+                                <input type="text" name="" id="auth_code" placeholder="" class="l_float" maxlength="6">
+
+                                <p class="authcode l_float"><span id="getImg">
+								<img src="", style="width:100%; height: 100%;">
+								</span></p>
+                                <img src="../../static/images/auth_code.svg">
+                                <p class="tips hidden">验证码错误</p>
+
+                            </div>
+                            <div class="b_clear submit">
+
+                                <p><input type="button"  id="user_login" value="登  录"></p>
+                                <a href="#" class="r_float">忘记密码？</a>
+                                <p class="tips hidden">登录失败，请检查您的账户与密码</p>
+                            </div>
+                        </form>
+                    </div>
+
+
+					<div class="login_con register" >
+						<form action="" method="POST">
+							<div>
+								<label for="user_name">注册号</label>
+								<input type="text" name="" id="username" placeholder="手机号">
+								<img src="../../static/images/icons/user.svg">
+								<p class="tips hidden">请检查您的账号</p>
+							</div>
+							<div>
+								<label for="user_pwd">密码</label>
+								<input type="password" name="" id="userpwd" placeholder="请输入账户密码">
+								<img src="../../static/images/icons/lock.svg">
+								<p class="tips hidden">请检查您的密码</p>
+							</div>
+							<div class="b_clear">
+								 <label for="auth_code" class="b_clear">验证码</label>
+								<input type="text" name="" id="authcode" placeholder="" class="l_float" maxlength="6">
+
+								<p class="authcode l_float"><span id="getImg1">
+								<img src="", style="width:100%; height: 100%;">
+								</span></p>
+								<img src="../../static/images/auth_code.svg">
+								<p class="tips hidden">验证码错误</p>
+
+							</div>
+							<div class="b_clear submit">
+
+								<p><input type="button"  id="register" value="注  册"></p>
+
+							</div>
+						</form>
+					</div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../../static/js/jquery-1.11.1.min.js"></script>
+        <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../static/js/md5.js"></script>
+        <script src="../../static/js/login.js"></script>
+    </body>
+</html>

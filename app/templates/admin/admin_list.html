@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=devive-width,initial-scale=1.0">
+	<link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../static/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../../static/css/easyui.css">
+	<link rel="stylesheet" href="../../static/css/icon.css">
+	<link rel="stylesheet" href="../../static/css/demo.css">
+	<link rel="stylesheet" href="../../static/css/admin_list.css">
+	<link rel="stylesheet" href="../../static/css/admin_common.css">
+	<script src="../../static/js/jquery-1.11.1.min.js"></script>	
+	<script src="../../static/js/jquery.easyui.min.js"></script>
+	<style>
+		.form-control{
+			padding-top:3px;
+			padding-bottom:3px;
+			height:31px;
+		}
+		#adminName{
+			font-size:12px;
+		}
+	</style>
+</head>
+<body style="padding:0!important">
+	<div class="container-fluid">
+   		<nav class="navbar head" role="navigation">               
+            <div class="navbar-header">
+            	<a class="navbar-brand" href="#"><img src="../../static/images/logo.png"></a>
+            </div>
+            <div class="adminBox">
+            	<div class="aBox"><span id="adminName"></span></div> <span class="caret"></span>&nbsp;&nbsp;&nbsp;<a href="./index.html" id="quit">退出</a>
+            </div>
+        </nav> 
+		<div class="row content">
+			<div class="col-md-2 col-md-offset-1 lefts" style="padding-right:0">
+				<div class="row">
+					<div class="col-md-12 leftBot">
+						<ul class="ul">
+							<li style="background:#2aabd2;color:#fff">
+								用户管理
+							</li>
+							<ol style="display:block">
+								<li style="background:#7bc0de"><a href="./user_list.html" style="color:#fff">用户列表<span>></span></a></li>
+								<li><a href="./merchant_list.html">商家列表<span>></span></a></li>
+								<li><a href="./admin_list.html">管理员列表<span>></span></a></li>
+							</ol>
+							<li>
+								 <a href ="./article_list.html">商家新闻列表</a>
+							</li>
+							<li>
+								系统管理								
+							</li>	
+							<ol>
+								<li><a href="./admin_new.html">创建管理员<span>></span></a></li>
+								<li><a href="./amend_password.html">修改登录密码<span>></span></a></li>
+							</ol>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 rights" style="text-align:left;padding-left:1%;padding-right:2%">
+				<form class="form-horizontal" role="form">
+
+			  		<div class="form-group">
+			    		<label class="col-sm-2 control-label">微信账号：</label>
+			    		<div class="col-sm-4">
+			      			<input type="text" class="form-control" id="account">
+			    		</div>
+			    		<label class="col-sm-2 control-label">联系手机：</label>
+			    		<div class="col-sm-4">
+			      			<input type="text" class="form-control" id="tele">
+			    		</div>
+			    		
+			  		</div>
+
+
+			 		<div class="col-sm-12 an">
+			    			<input type="button" class="btn btn-info" id="search" value="查询">
+							<a href="./admin_new.html" class="btn btn-info">创建管理员</a>
+			    	</div>		
+				</form>
+				<table class="easyui-datagrid" style="width:100%;" id="tt">
+				</table>	
+			</div>
+		</div>
+	 	<div class="row footer">
+			<div class="col-md-12">
+				京审备案
+			</div>
+		</div> 
+	</div>
+	<script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../static/js/structure.js"></script>
+	<script src="../../static/js/leftBot.js"></script>
+	<script src="../../static/js/admin_list.js"></script>
+</body>
+</html>
